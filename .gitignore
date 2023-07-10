@@ -1,0 +1,4 @@
+lib/inswapper_128.onnx
+.idea
+*__pycache__*
+gui/result/*

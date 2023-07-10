@@ -6,7 +6,7 @@ from PIL import ImageTk, Image
 
 from lib.faceswapper import FaceSwapper
 
-face_swapper = FaceSwapper()
+face_swapper = FaceSwapper('../lib/inswapper_128.onnx')
 fenetre = Tk("Simple Face Swapper")
 fenetre.geometry("1200x500")
 

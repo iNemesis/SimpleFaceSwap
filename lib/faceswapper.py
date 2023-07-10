@@ -4,10 +4,10 @@ from insightface.app import FaceAnalysis
 
 
 class FaceSwapper:
-    def __init__(self):
+    def __init__(self, model_path):
         self.app = FaceAnalysis(name='buffalo_l')
         self.app.prepare(ctx_id=0, det_size=(640, 640))
-        self.swapper = insightface.model_zoo.get_model('inswapper_128.onnx', download=False, download_zip=False)
+        self.swapper = insightface.model_zoo.get_model(model_path, download=False, download_zip=False)
 
     def swap(self, file_with_face, file_to_swap, file_output):
         # import picture and extract the first founded face

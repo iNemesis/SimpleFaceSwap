@@ -15,5 +15,6 @@ if __name__ == '__main__':
 
     image_to_swap = sys.argv[1]
     image_with_face = sys.argv[2]
+    output = "./result/" + str(uuid.uuid4()) + ".jpg"
 
-    FaceSwapper().swap(image_with_face, image_to_swap, "./result/" + str(uuid.uuid4()) + ".jpg")
+    FaceSwapper('lib/inswapper_128.onnx').swap(image_with_face, image_to_swap, output)

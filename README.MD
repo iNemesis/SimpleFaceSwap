@@ -14,6 +14,10 @@ there is a command-line app and a _ugly_ GUI app
 
 `python ./main.py image_to_swap image_with_face`
 
+#### you can also batch multiples png images to swap
+
+`ls *.png | xargs -I @ python ./main.py @ image_with_face`
+
 ### GUI
 
 `python gui/main.py`
